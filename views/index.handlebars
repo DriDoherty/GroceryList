@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="header__text-box">
+        <h1 class="heading-primary">Grocery List</h1>
+    </div>
+</header>
+
+<main>
+    <div class="row">
+        {{#each groceries}}
+            <div class="card">
+                <div class="card__label">
+                    <img src={{image}} style="height:50px" alt={{category}}>
+                    <p class="card__text">Attribution: {{attribution}}</p>
+                    <p class="card__text">Item: {{item}}</p>
+                    <p class="card__text">Type: {{type}}</p>
+                    <p class="card__text">Brand: {{brand}}</p> 
+                    <p class="card__text">Qty: {{qty}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</main>
