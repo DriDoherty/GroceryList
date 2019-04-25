@@ -1,0 +1,94 @@
+.card {
+    background-color: $color-grey-barelythere;
+    width: 60%;
+    margin: 0 auto;
+    border: $color-grey-dark solid 1px;
+    border-radius: .5rem;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    &__col {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+
+        &--category {
+            width: calc((100% - 5 * #{$gutter-horizontal}) / 5);
+        }
+
+        &--details {
+            width: calc( 3 * ((100% - 5 * #{$gutter-horizontal}) / 5) + 2 * #{$gutter-horizontal});
+        }
+
+        &--qty {
+            width: calc((100% - 5 * #{$gutter-horizontal}) / 5);
+        }
+    }
+
+    &__image {
+        height: 7.5rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__text {
+        text-transform: uppercase;
+
+        &--large {
+            font-size: 2.5rem;
+        }
+
+        &--medium {
+            font-size: 2rem;
+        }
+
+        &--small {
+            font-size: 1.75rem;
+        }
+
+        &-tiny {
+            font-size: .75rem;
+        }
+    }
+}
+
+/* Extra small devices (phones, 620px and down) */
+@media only screen and (max-width: 620px) {
+    .card {
+        width: 90%;
+
+        [class*="__col--"] {
+            width: 100%;
+        }
+
+        & .u-left-text {
+            text-align: center;;    
+        }
+
+        &__image {
+            height: 5rem;
+        }
+    }
+}
+
+/* Extra small devices (phones, 620px and down) */
+@media only screen and (min-width: 620px) and (max-width: 760px) {
+    .card {
+        &__image {
+            height: 5rem;
+        }
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}

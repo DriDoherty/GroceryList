@@ -5,18 +5,23 @@
 </header>
 
 <main>
-    <div class="row">
+    <section class="section-list">
         {{#each groceries}}
             <div class="card">
-                <div class="card__label">
-                    <img src={{image}} style="height:50px" alt={{category}}>
-                    <p class="card__text">Attribution: {{attribution}}</p>
-                    <p class="card__text">Item: {{item}}</p>
-                    <p class="card__text">Type: {{type}}</p>
-                    <p class="card__text">Brand: {{brand}}</p> 
-                    <p class="card__text">Qty: {{qty}}</p>
+                <div class="card__col card__col--category u-center-text">
+                    <img src={{image}} class="card__image" alt={{category}}>
+                </div>
+
+                <div class="card__col card__col--details u-left-text">
+                    <p class="card__text card__text--large">{{item}}</p>
+                    <p class="card__text card__text--medium">{{brand}} - {{type}}</p>
+                </div>
+
+                <div class="card__col card__col--qty u-center-text">
+                    <p class="card__text card__text--medium u-bold-text u-margin-bottom-tiny">Qty</p>
+                    <p class="card__text card__text--small u-italic-text">{{qty}}</p>
                 </div>
             </div>
         {{/each}}
-    </div>
+    </section>
 </main>
