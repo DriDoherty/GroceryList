@@ -18,8 +18,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  background-color: #fdfefe;
-  color: #616a6b;
+  background-color: #f9f8fd;
+  color: #3d3d3f;
   padding: 5rem; }
 
 .heading-primary {
@@ -77,6 +77,9 @@ body {
 .u-bold-text {
   font-weight: 700; }
 
+.u-primary-color-text {
+  color: #28b485; }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
@@ -90,13 +93,13 @@ body {
   margin-top: 8rem; }
 
 .card {
-  background-color: #e5e8e8;
+  background-color: #f9f8fd;
   width: 60%;
   margin: 0 auto;
-  border: #616a6b solid 1px;
+  border: #3d3d3f solid 1px;
   border-radius: .5rem; }
   .card:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
   .card::after {
     content: "";
     display: table;
@@ -126,31 +129,38 @@ body {
     .card__text-tiny {
       font-size: .75rem; }
 
-/* Extra small devices (phones, 620px and down) */
 @media only screen and (max-width: 620px) {
+  .card [class*="__col--"] {
+    width: 100%; }
+  .card .u-left-text {
+    text-align: center; } }
+
+@media only screen and (max-width: 768px) {
   .card {
     width: 90%; }
-    .card [class*="__col--"] {
-      width: 100%; }
-    .card .u-left-text {
-      text-align: center; }
+    .card__text--large {
+      font-size: 2rem; }
+    .card__text--medium {
+      font-size: 1.5rem; }
+    .card__text--small {
+      font-size: 1.25rem; }
+    .card__text-tiny {
+      font-size: .75rem; }
     .card__image {
       height: 5rem; } }
 
-/* Extra small devices (phones, 620px and down) */
-@media only screen and (min-width: 620px) and (max-width: 760px) {
-  .card__image {
-    height: 5rem; } }
-
-/* Medium devices (tablets, 768px and down) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .card {
     width: 80%; } }
+
+@media only screen and (max-width: 992px) and (max-width: 1150px) {
+  .card {
+    width: 70%; } }
 
 .header {
   position: relative;
   height: 25vh;
-  background-color: #e5e8e8; }
+  background-color: #f6f5f3; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -160,4 +170,4 @@ body {
 
 .section-list {
   padding: 2rem 0;
-  background-color: #b2babb; }
+  background-color: #f6f5f3; }
