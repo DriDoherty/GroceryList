@@ -2,8 +2,8 @@
     background-color: $color-white;
     width: 60%;
     margin: 0 auto;
-    border: $color-grey-dark solid 1px;
-    border-radius: .5rem;
+    border-bottom: $color-grey-light solid 1px;
+    // border-radius: .5rem;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
@@ -52,7 +52,7 @@
             font-size: 1.75rem;
         }
 
-        &-tiny {
+        &--tiny {
             font-size: .75rem;
         }
     }
@@ -60,12 +60,20 @@
 
 @media only screen and (max-width: 620px) {
     .card {
+        &__labels {
+            display: none;
+        }
+
         [class*="__col--"] {
             width: 100%;
         }
 
         & .u-left-text {
             text-align: center;;    
+        }
+
+        & .u-hidden {
+            visibility: visible;
         }
     }
 }
@@ -87,7 +95,7 @@
                 font-size: 1.25rem;
             }
     
-            &-tiny {
+            &--tiny {
                 font-size: .75rem;
             }
         }

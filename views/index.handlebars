@@ -6,6 +6,20 @@
 
 <main>
     <section class="section-list">
+        <div class="card card__labels">
+            <div class="card__col card__col--category u-center-text">
+                <p class="card__text card__text--medium u-bold-text u-primary-color-text">Category</p>
+            </div>
+
+            <div class="card__col card__col--details u-center-text">
+                <p class="card__text card__text--medium u-bold-text u-primary-color-text">Item</p>
+            </div>
+
+            <div class="card__col card__col--qty u-center-text">
+                <p class="card__text card__text--medium u-bold-text u-primary-color-text">Qty</p>
+            </div>
+        </div>
+
         {{#each groceries}}
             <div class="card">
                 <div class="card__col card__col--category u-center-text">
@@ -18,7 +32,7 @@
                 </div>
 
                 <div class="card__col card__col--qty u-center-text">
-                    <p class="card__text card__text--medium u-bold-text u-margin-bottom-tiny u-primary-color-text">Qty</p>
+                    <p class="card__text card__text--medium u-bold-text u-primary-color-text u-hidden">Qty</p>
                     <p class="card__text card__text--small u-italic-text">{{qty}}</p>
                 </div>
             </div>
